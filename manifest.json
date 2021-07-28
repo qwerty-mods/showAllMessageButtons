@@ -1,0 +1,7 @@
+{
+    "name": "Show All Message Buttons",
+    "version": "1.0.0",
+    "author": "Kyza, 12944qwerty",
+    "license": "None",
+    "description": "Forces the utility buttons on messages hidden in the context menu to always be displayed as buttons."
+}
