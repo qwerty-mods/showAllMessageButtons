@@ -80,7 +80,7 @@ module.exports = class showAllMessageButtons extends Plugin {
 
 	updateMessage(message, showEmojiPicker) {
 		emojiPickerMessage = showEmojiPicker ? message.id : "";
-		FluxDispatcher.dirtyDispatch({
+		FluxDispatcher.dispatch({
 			type: "MESSAGE_UPDATE",
 			message,
 		});
