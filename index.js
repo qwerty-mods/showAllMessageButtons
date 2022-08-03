@@ -39,13 +39,10 @@ module.exports = class showAllMessageButtons extends Plugin {
                     addedListener = true;
 
                     const pickerClick = (event) =>  {
-                        console.log(event);
                         const onPicker = event.path.filter(
                                             (element) => element.id == "emoji-picker-tab-panel"
                                         ).length == 1
                             
-                        console.log(onPicker, event.shiftKey);
-
                         if ((onPicker && !event.shiftKey) || !onPicker) {
                             removePickerClick();
                             addedListener = false;
@@ -80,7 +77,7 @@ module.exports = class showAllMessageButtons extends Plugin {
 
 	updateMessage(message, showEmojiPicker) {
 		emojiPickerMessage = showEmojiPicker ? message.id : "";
-		FluxDispatcher.dirtyDispatch({
+		FluxDispatcher.dispatch({
 			type: "MESSAGE_UPDATE",
 			message,
 		});
